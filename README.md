@@ -29,6 +29,44 @@ A secure command-line application for managing user credentials, built with Java
 - MySQL Server
 - MySQL JDBC Driver (mysql-connector-java)
 
+## Dependencies Setup
+
+### Download MySQL JDBC Driver
+
+1. Download the MySQL Connector/J JAR file:
+   - Visit [MySQL Connector/J Downloads](https://dev.mysql.com/downloads/connector/j/)
+   - Select "Platform Independent" and download the ZIP file
+   - Extract and locate `mysql-connector-java-x.x.x.jar` (or `mysql-connector-j-x.x.x.jar` for newer versions)
+
+2. Alternative direct download:
+   ```bash
+   # Using wget (Linux/macOS)
+   wget https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.33/mysql-connector-java-8.0.33.jar
+   
+   # Using curl
+   curl -O https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.33/mysql-connector-java-8.0.33.jar
+   ```
+
+### Eclipse IDE Setup
+
+1. **Add External JAR to Project:**
+   - Right-click your project in Package Explorer
+   - Select `Properties`
+   - Go to `Java Build Path` > `Libraries` tab
+   - Click `Add External JARs...`
+   - Navigate to and select your downloaded MySQL JDBC JAR file
+   - Click `Apply and Close`
+
+2. **Module Path Configuration (for Java 9+ projects):**
+   - In the same `Java Build Path` > `Libraries` tab
+   - Expand `Module path` or `Class path` section
+   - Ensure the MySQL JAR appears under the appropriate path
+   - If using modules, add the JAR to `Module path`
+
+3. **Verify Setup:**
+   - The JAR should appear under `Referenced Libraries` in Package Explorer
+   - No import errors should remain in your Java files
+
 ## Database Setup
 
 1. Install MySQL Server
